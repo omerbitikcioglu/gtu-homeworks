@@ -1,0 +1,186 @@
+package com.example;
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+/** A MatrixGraph is an implementation of the Graph
+*   abstract class that uses an array to represent the
+*   edges.
+*   @author Koffman and Wolfgang
+*/
+
+public class MatrixGraph
+    extends AbstractGraph {
+
+  /**** BEGIN EXERCISE ****/
+  // Data field
+  /** The two dimensional array to represen an edge */
+  private double[][][] edges;
+
+  // Consructors
+  /** Construct a graph with the specified number of
+      vertices and directionality
+      @param numV - The number of vertices
+      @param directed - The directionality flag
+   */
+  public MatrixGraph(int numV, boolean directed) {
+    super(numV, directed);
+    edges = new double[numV][][];
+    if (!directed) {
+      for (int i = 0; i != numV; ++i) {
+        edges[i] = new double[numV][3];
+        for (int j = 0; j != numV; ++j) {
+          edges[i][j] = new double[]{Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY};
+        }
+      }
+    }
+    else {
+      for (int i = 0; i != numV; ++i) {
+        edges[i] = new double[i + 1][3];
+        for (int j = 0; j != i + 1; ++j) {
+          edges[i][j] = new double[]{Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY};
+        }
+      }
+    }
+  }
+
+  // Implementation of abstract methods
+  /** Insert a new edge into the graph
+      @param edge - The new edge
+   */
+  public void insert(Edge edge) {
+    setEdgeValue(edge.getSource(), edge.getDest(),
+                 edge.getDistance(), edge.getTime(), edge.getQuality());
+  }
+
+  /** Determine if an edge exists
+      @param source - The source vertix
+      @param dest - The destination vertix
+      @return true if there is an edge from u to v
+   */
+  public boolean isEdge(int source, int dest) {
+    double[] weights = getEdgeValue(source, dest);
+    return Double.POSITIVE_INFINITY != weights[0] &&
+            Double.POSITIVE_INFINITY != weights[1] &&
+            Double.POSITIVE_INFINITY != weights[2];
+  }
+
+  /** Get the edge between two vertices. If an
+      edge does not exist, an Edge with a weight
+      of POSITIVE_INFINITY is returned.
+      @param source - The source
+      @param dest - The destination
+      @return the edge between these two vertices
+   */
+  public Edge getEdge(int source, int dest) {
+    double[] weights = getEdgeValue(source, dest);
+    return new Edge(source, dest, weights[0], weights[1], weights[2]);
+  }
+
+  /** Return an iterator to the edges connected
+      to a given vertix.
+      @param source - The source vertix
+      @return an EdgeIterator to the vertices
+      contcted to source
+   */
+  public Iterator < Edge > edgeIterator(int source) {
+    return new Iter(source);
+  }
+
+  /** Method to set the value of an edge
+      @param source - The source vertix
+      @param dest - The destination vertix
+      @param d - The distance
+      @param t - The time
+      @param q - The quality
+   */
+  private void setEdgeValue(int source, int dest, double d, double t, double q) {
+    if (isDirected() || source <= dest) {
+      edges[source][dest] = new double[]{d,t,q};
+    }
+    else {
+      edges[dest][source] = new double[]{d,t,q};
+    }
+  }
+
+  /** Method to get the value of an edge
+   *  @param source - The source vertex
+   *  @param dest - The destination vertex
+   *  @return The weight of this edge or
+   *  POSITIVE_INFINITY if no edge exists
+   */
+  private double[] getEdgeValue(int source, int dest) {
+    if (isDirected() | source <= dest) {
+      return edges[source][dest];
+    }
+    else {
+      return edges[dest][source];
+    }
+  }
+
+  // Iter class
+  /** An iterator to the edges.  An Edge iterator is
+   *  similar to an Iterator except that its
+   *  next method will always return an edge
+   */
+  private class Iter
+      implements Iterator < Edge > {
+    // Data fields
+    /** The source vertix for this iterator */
+    private int source;
+
+    /** The current index for this iterator */
+    private int index;
+
+    // Constructor
+    /** Construct an EdgeIterator for a given vertix
+     *  @param source - The source vertix
+     */
+    public Iter(int source) {
+      this.source = source;
+      index = -1;
+      advanceIndex();
+    }
+
+    /** Return true if there are more edges
+     *  @return true if there are more edges
+     */
+    public boolean hasNext() {
+      return index != getNumV();
+    }
+
+    /** Return the next edge if there is one
+     *  @throws NoSuchElementException - there are no
+     *  more edges
+     *  @return the next Edge in the iteration
+     */
+    public Edge next() {
+      if (index == getNumV()) {
+        throw new java.util.NoSuchElementException();
+      }
+      double[] weights = getEdgeValue(source, index);
+      Edge returnValue = new Edge(source, index, weights[0], weights[1], weights[2]);
+      advanceIndex();
+      return returnValue;
+    }
+
+    /**
+     * Remove is not implemented
+     * @throws UnsupportedOperationException if called
+     */
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+
+    /** Advance the index to the next edge */
+    private void advanceIndex() {
+      do {
+        index++;
+      }
+      while (index != getNumV()
+             && Double.POSITIVE_INFINITY == getEdgeValue(source, index)[0]
+              && Double.POSITIVE_INFINITY == getEdgeValue(source, index)[1]
+              && Double.POSITIVE_INFINITY == getEdgeValue(source, index)[2]);
+    }
+  }
+}

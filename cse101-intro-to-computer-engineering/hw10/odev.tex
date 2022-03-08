@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{graphicx}
+\title{BIL101 HW10}
+\author{Omer Faruk Bitikcioglu}
+\date{December 5, 2017}
+\begin{document}
+	\maketitle
+	\newpage
+	\section{Gereksinim Analizi}
+	\paragraph{Amac ve Kapsam :}
+	\begin{itemize}
+		\item Bu projenin amaci cikolata yeme yarismasi yapan Ayse ve Mehmet'e kimin daha cok cikolata yedigi ve kazananin kim oldugu konusunda yardımci olmaktır.
+		
+		\item Proje kapsamında cikolatalarin cesitleri, markalari veya fiziksel nicelikleri gibi detaylar yer almayacaktir.
+	\end{itemize}
+	
+	\paragraph{Hedefler ve Basari Kriterleri :}
+	\begin{itemize}
+		\item Projemiz yarismaci Ayse ve Mehmet'in kacar cikolata yedigini saymali.
+		
+		\item Kim daha cok cikolata yediyse onu galip ilan etmeli.
+		
+		\item Program her calistiginda 1-11 arasinda rastgele uzunluk degerlerinde cikolatalar uretmeli ve bunlari rastgele sirada masaya dizmeli.
+		
+		\item Mehmet soldan saga, Ayse sagdan sola dogru yemeli.
+		
+		\item Mehmet Ayse'den 2 kat daha hızlı yemeli.
+		
+		\item Ortada 1 cikolata kalirsa onu Mehmet yemeli.
+		
+		\item Cikolatalarin yenme sureleri boylariyla orantili olmali.
+	\end{itemize}
+	\paragraph{Genel Bakis :}
+	Bu proje Mehmet ile Ayse'nin cikolata yeme yarismasindan galip cikani bulan bir yazilim projesidir.
+	
+	\paragraph{Fonksiyonel Gereksinimler}
+	\begin{itemize}
+		\item Bu uygulama cikolatalarin boylarini rastgele belirlemeli
+		
+		\item Bu uygulama cikolata boylarini ekrana yazmali
+		
+		\item Bu uygulama kimin ne kadar cikolata yedigini saymali
+		
+		\item Bu uygulama kimin ne kadar cikolata yedigini ekrana yazdirmali
+		
+		\item Bu uygulama kimin daha cok cikolata yedigini hesaplamali ve kazanani belirlemeli
+	\end{itemize}
+
+	\newpage
+	
+	\section{Tasarim ve Aciklama}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{schart.png}
+			\caption{Tasarim Yapi Semasi (Structure Chart)}
+			\label{fig:schart}
+		\end{figure}
+	Figur 1'de goruldugu uzere, ilk once elimizdeki dizinin eleman sayisi belirlenip bir tamsayi degiskenine atanir. Ondan sonra bu eleman sayisi degiskeni ve elimizdeki dizi rastgele cikolata boylari ureten fonksiyona gonderilir. Bu fonksiyon eleman sayisi kadar rastgele 1-11 arasi sayi uretip dizinin elemanlarini olusturur. Elemanlari belli olan dizi ve eleman sayisi verisi cikolata boylarini ekrana yazdirma fonksiyonuna gonderilir. Bu fonksiyon dizinin elemanlarini tek tek ekrana yazdirir. Bundan sonra ayni veriler kimin kac cikolata yedigini sayan fonksiyona gonderilir. Mehmet ve Ayse'nin yedigi cikolata sayilarini hesaplayan bu fonksiyon bu verileri iki farkli degiskende sakli tutar. Mehmet ve Ayse'nin yedigi cikolata sayilarini iceren veriler kimin kac cikolata yedigini ekrana yazdiran fonksiyona gonderilip ekrana alt alta yazdirilir. Ayni veriler kazanani belirle fonksiyonuna gonderilip kimin yedigi cikolata sayisi daha fazlaysa kazanan belirlenip ekrana yazdirilir. 
+	
+	\newpage
+	
+	\section{Algoritma}
+	\begin{itemize}
+		\item def main():\\
+		INTEGER elemanSayisi \\
+		INTEGER ARRAY cikoBoylar
+		
+		\item def rastgeleBoy(cikoBoylar[],elemanSayisi)
+		
+		\item def ekranaYazdir(cikoBoylar[], elemanSayisi)
+		
+		\item def yenenSay(cikoBoylar[],elemanSayisi)
+		
+		\item def kimNeYedi(mehmet,ayse)
+		
+		\item def kazananKim(mehmet,ayse)
+		
+		\item def rastgeleBoy(cikoBoylar[],elemanSayisi):\\
+		INTEGER i ve a\\
+		FOR i 0 ile elemanSayisi arasi degerler\\
+		WHILE(a == 0)\\
+		do {a = 1-11 arasi rastgele sayi}\\
+		cikoBoylar[i] = a
+		
+		\item def ekranaYazdir(cikoBoylar[], elemanSayisi):\\
+		INTEGER i\\
+		FOR i 0 ile elemanSayisi arasi degerler\\
+		PRINT cikoBoylar[i]\\
+		IF i elemanSayisi-1'e esitse alt satira gec\\
+		
+		\item def yenenSay(cikoBoylar[],elemanSayisi):\\
+		INTEGER i degeri 0\\
+		INTEGER j degeri elemanSayisi-1\\
+		INTEGER mehmet degeri 0\\
+		INTEGER ayse degeri 0\\
+		INTEGER ayse kalan degeri 0\\
+		INTEGER mehmet kalan degeri 0\\
+		INTEGER mehmet'in yeme zamani\\
+		INTEGER ayse'nin yeme zamani\\
+		
+		FOR elemanSayisi 0 olana dek\\
+		IF  i j'ye esitse\\
+		IF ayse'nin yeme zamani cikoBoylar [j]*2 ' ye esitse\\
+		mehmet' e 1 ekle\\
+		elemanSayisi 1 azalt\\
+		ELSE\\
+		ayse' ye 1 ekle\\
+		elemanSayisi 1 azalt\\ \\
+		ELSE\\
+		IF ayse kalan degeri 0'a esitse\\
+		ayse'nin yeme zamani = cikoBoylar[j]*2\\
+		ELSE\\
+		ayse'nin yeme zamani = ayse kalan degeri\\ \\
+		IF mehmet kalan degeri 0'a esitse\\
+		mehmet'in yeme zamani = cikoBoylar[j]\\
+		ELSE\\
+		mehmet'in yeme zamani = mehmet kalan degeri\\ \\
+		IF mehmet'in yeme zamani < ayse'nin yeme zamani\\
+		WHILE(mehmet'in yeme zamani 0 olana dek)\\
+		mehmet'in yeme zamani 1 azalt\\
+		ayse'nin yeme zamani 1 azalt\\ \\
+		mehmet 1 arttir\\
+		i 1 arttir\\
+		ayse kalan degeri += ayse'nin yeme zamani\\
+		elemanSayisi 1 azalt\\
+		ELSE IF ayse'nin yeme zamani < mehmet'in yeme zamani\\
+		WHILE(ayse'nin yeme zamani 0 olana dek)\\
+		mehmet'in yeme zamani 1 azalt\\
+		ayse'nin yeme zamani 1 azalt\\ \\
+		ayse 1 arttir\\
+		j 1 azalt\\
+		mehmet kalan degeri += mehmet'in yeme zamani\\
+		elemanSayisi 1 azalt\\
+		ELSE\\
+		mehmet 1 arttir\\
+		ayse 1 arttir\\
+		i 1 arttir\\
+		j 1 azalt\\
+		elemanSayisi 2 azalt \\ \\
+		
+		
+		\item def kimNeYedi(mehmet,ayse):\\
+		PRINT mehmet\\
+		PRINT ayse\\ \\
+			
+		\newpage
+		\item def kazananKim(mehmet,ayse):\\
+		IF mehmet buyuktur ayse\\
+		PRINT Kazanan : Mehmet\\
+		ELSE IF ayse buyuktur mehmet\\
+		PRINT Kazanan : Ayse\\
+		ELSE\\
+		PRINT Kazanan : Berabere
+		
+			
+		
+	\end{itemize}
+		
+		
+	
+	
+\end{document}
