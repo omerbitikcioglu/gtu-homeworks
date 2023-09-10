@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57f38150-730e-4b76-99b3-32dc5a3184f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../hw1/.~lock.report_hw1.odt#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/.~lock.report.odt#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw2/report.odt" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/report.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/client_queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request_queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/request_queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/server.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.idea/midterm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/.~lock.report.odt#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/bibo_cl_sv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/client.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/client_queue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/report.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/161044010_midterm/server.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/bibo_cl_sv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/client.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/client_queue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/midterm2023.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/report.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/report.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/server.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/testdir/test1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/testdir/test2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/testdir/test3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/testdir/test4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm/testdir/test5" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.2" />
+  </component>
+  <component name="ProjectId" id="2PQHjlN1ieG1AMlFgr13VFVOWcL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/media/omer/Depo/GTU/SystemProgramming/Homeworks/hw3-midterm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.all" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57f38150-730e-4b76-99b3-32dc5a3184f3" name="Changes" comment="" />
+      <created>1683382522746</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683382522746</updated>
+      <workItem from="1683382524805" duration="729000" />
+      <workItem from="1683574365853" duration="4000" />
+      <workItem from="1683627292676" duration="3101000" />
+      <workItem from="1683707834323" duration="6000" />
+      <workItem from="1683744477817" duration="1986000" />
+      <workItem from="1683785114225" duration="5936000" />
+      <workItem from="1683873095730" duration="343000" />
+      <workItem from="1683875280451" duration="22685000" />
+      <workItem from="1683913649361" duration="15421000" />
+      <workItem from="1683958820314" duration="5979000" />
+      <workItem from="1683966086832" duration="3672000" />
+      <workItem from="1683976605579" duration="8345000" />
+      <workItem from="1684019244157" duration="10400000" />
+      <workItem from="1684127575689" duration="2099000" />
+      <workItem from="1684135635820" duration="17585000" />
+      <workItem from="1684176089326" duration="7486000" />
+      <workItem from="1684260856822" duration="9580000" />
+      <workItem from="1684527956948" duration="4000" />
+      <workItem from="1684528321747" duration="592000" />
+      <workItem from="1684570407758" duration="4726000" />
+      <workItem from="1684614361014" duration="53808000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
