@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hospital Management System - Add Doctor</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Hospital Management System - Add Doctor</h1>
+
+      <form id="add-doctor-form" class="mt-4">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="specialization">Specialization:</label>
+          <select
+            id="specialization"
+            name="specialization"
+            class="form-control"
+          >
+            <option value="surgeon">Surgeon</option>
+            <option value="general_practitioner">General Practitioner</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date_of_joining">Date of Joining:</label>
+          <input
+            type="date"
+            id="date_of_joining"
+            name="date_of_joining"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone_number">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone_number"
+            name="phone_number"
+            class="form-control"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          <small class="form-text text-muted">Format: 555-666-7788</small>
+        </div>
+        <div class="form-group">
+          <label for="department_name">Department Name:</label>
+          <select
+            id="department_name"
+            name="department_name"
+            class="form-control"
+          >
+            <!-- Dropdown options will be populated dynamically -->
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Add Doctor</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="../../scripts/doctor/add_doctor.js"></script>
+  </body>
+</html>
